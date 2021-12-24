@@ -35201,7 +35201,7 @@
                     {
                         "name": "Authorization",
                         "in": "header",
-                        "description": "authentication token",
+                        "description": "authentication token OAuth {{token}}",
                         "required": true,
                         "style": "simple",
                         "schema": {
@@ -35673,7 +35673,7 @@
                     {
                         "name": "Authorization",
                         "in": "header",
-                        "description": "authentication token",
+                        "description": "authentication token OAuth {{token}}",
                         "required": true,
                         "style": "simple",
                         "schema": {
@@ -35908,7 +35908,7 @@
                     {
                         "name": "Authorization",
                         "in": "header",
-                        "description": "authentication token",
+                        "description": "authentication token OAuth {{token}}",
                         "required": true,
                         "style": "simple",
                         "schema": {
@@ -36238,7 +36238,7 @@
                     {
                         "name": "Authorization",
                         "in": "header",
-                        "description": "authentication token",
+                        "description": "authentication token OAuth {{token}}",
                         "required": true,
                         "style": "simple",
                         "schema": {
