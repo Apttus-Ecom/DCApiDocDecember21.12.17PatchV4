@@ -19160,7 +19160,7 @@
                     }
                 ],
                 "requestBody": {
-                    "description": "Allows bulk Lineitem update for all the fields of lineItem for given cart. ",
+                    "description": "Allows bulk lineitem update for all the fields of lineItem for a given cart. Product Attributes cannot be updated with this API.",
                     "content": {
                         "application/json": {
                             "schema": {
@@ -19169,17 +19169,16 @@
                                     "type": "object"
                                 },
                                 "properties": {
-                                    "Id" : {
+                                    "Id": {
                                         "type": "string"
                                     }
                                 },
                                 "example": [
                                     {
-                                     
-                                      "Id": "a1301000000bwVaAAI",
-                                      "Apttus_Config2__Quantity__c": 2
+                                        "Id": "a1301000000bwVaAAI",
+                                        "Apttus_Config2__Quantity__c": 2
                                     }
-                                  ]
+                                ]
                             }
                         }
                     }
@@ -23497,38 +23496,66 @@
                                     "ProductAttributes": {
                                         "type": "object"
                                     }
+                                }
+                            },
+                            "examples": {
+                                "example1": {
+                                    "summary": "Example 1 without product attributes",
+                                    "value": [
+                                        {
+                                            "LineItem": {
+                                                "attributes": {
+                                                    "type": "Apttus_Config2__LineItem__c"
+                                                },
+                                                "Id": "a13W0000003AQAHIA4",
+                                                "Apttus_Config2__LineNumber__c": "1.0",
+                                                "Apttus_Config2__PrimaryLineNumber__c": "1.0",
+                                                "Apttus_Config2__PricingStatus__c": "Pending",
+                                                "Apttus_Config2__ConfigurationId__c": "a1IW0000001S3hJMAS",
+                                                "Apttus_Config2__Quantity__C": 2
+                                            },
+                                            "ProductAttributes": null
+                                        },
+                                        {
+                                            "LineItem": {
+                                                "attributes": {
+                                                    "type": "Apttus_Config2__LineItem__c"
+                                                },
+                                                "Id": "a13W0000003AQAcIAO",
+                                                "Apttus_Config2__LineNumber__c": "1.0",
+                                                "Apttus_Config2__PrimaryLineNumber__c": "2.0",
+                                                "Apttus_Config2__PricingStatus__c": "Pending",
+                                                "Apttus_Config2__OptionId__c": "01t3I000000LwmBQAS",
+                                                "Apttus_Config2__ConfigurationId__c": "a1IW0000001S3hJMAS",
+                                                "Apttus_Config2__Quantity__C": 2
+                                            },
+                                            "ProductAttributes": null
+                                        }
+                                    ]
                                 },
-                                "example": [
-                                    {
-                                        "LineItem": {
-                                            "attributes": {
-                                                "type": "Apttus_Config2__LineItem__c"
+                                "example2": {
+                                    "summary": "Example 2 with product attributes",
+                                    "value": [
+                                        {
+                                            "LineItem": {
+                                                "attributes": {
+                                                    "type": "Apttus_Config2__LineItem__c"
+                                                },
+                                                "Id": "a13W0000003AQAHIA4",
+                                                "Apttus_Config2__LineNumber__c": "1.0",
+                                                "Apttus_Config2__PrimaryLineNumber__c": "1.0",
+                                                "Apttus_Config2__PricingStatus__c": "Pending",
+                                                "Apttus_Config2__ConfigurationId__c": "a1IW0000001S3hJMAS",
+                                                "Apttus_Config2__Quantity__C": 2
                                             },
-                                            "Id": "a13W0000003AQAHIA4",
-                                            "Apttus_Config2__LineNumber__c": "1.0",
-                                            "Apttus_Config2__PrimaryLineNumber__c": "1.0",
-                                            "Apttus_Config2__PricingStatus__c": "Pending",
-                                            "Apttus_Config2__ConfigurationId__c": "a1IW0000001S3hJMAS",
-                                            "Apttus_Config2__Quantity__C": 2
-                                        },
-                                        "ProductAttributes": null
-                                    },
-                                    {
-                                        "LineItem": {
-                                            "attributes": {
-                                                "type": "Apttus_Config2__LineItem__c"
-                                            },
-                                            "Id": "a13W0000003AQAcIAO",
-                                            "Apttus_Config2__LineNumber__c": "1.0",
-                                            "Apttus_Config2__PrimaryLineNumber__c": "2.0",
-                                            "Apttus_Config2__PricingStatus__c": "Pending",
-                                            "Apttus_Config2__OptionId__c": "01t3I000000LwmBQAS",
-                                            "Apttus_Config2__ConfigurationId__c": "a1IW0000001S3hJMAS",
-                                            "Apttus_Config2__Quantity__C": 2
-                                        },
-                                        "ProductAttributes": null
-                                    }
-                                ]
+                                            "ProductAttributes": {
+                                                "Id": "a3Y8D000000PSDYUA4",
+                                                "Apttus_Config2__LineItemId__c": "a2u8D000000L1u9QAC",
+                                                "Apttus_Config2__Color__c": "Black"
+                                            }
+                                        }
+                                    ]
+                                }
                             }
                         }
                     }
