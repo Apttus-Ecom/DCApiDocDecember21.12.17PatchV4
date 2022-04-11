@@ -36493,7 +36493,7 @@
                     "Carts"
                 ],
                 "summary": "Compute Tax",
-                "description": "This API can be used for running tax calculations for the given cart",
+                "description": "This API can be used for calculating tax for a given cart",
                 "operationId": "ComputeTax",
                 "parameters": [
                     {
@@ -36523,7 +36523,7 @@
                     {
                         "name": "cartId",
                         "in": "path",
-                        "description": "The reference to the cart or 'active' for the current active cart.",
+                        "description": "The reference to the active cart Id.",
                         "required": true,
                         "style": "simple",
                         "explode": false,
